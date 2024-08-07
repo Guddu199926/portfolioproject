@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+# this functions helps to make columns more optimized
 def read_rows(rows):
     for index, row in rows.iterrows():
         st.header(row["title"])
