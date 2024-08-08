@@ -1,4 +1,6 @@
 import streamlit as st
+import email_password
+
 
 st.header("Contact me")
 
@@ -7,4 +9,6 @@ with st.form(key = 'email_forms'):
     message = st.text_area("your message")
     button = st.form_submit_button("Submit")
     if button:
-        print("yes bro")
+        email_password.send_email(user_email, message)
+    else:
+        print("wrong email")

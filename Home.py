@@ -28,6 +28,8 @@ col3, empty_col ,col4 = st.columns([1.5,0.5,1.5])
 
 df = pd.read_csv("data.csv", sep = ";")
 
+print(df)
+
 with col3:
     read_rows(df[:10])
 
